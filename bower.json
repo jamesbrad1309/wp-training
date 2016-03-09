@@ -1,0 +1,36 @@
+{
+  "name": "wp-starter-theme",
+  "description": "A starter theme for WP developer",
+  "main": "index.js",
+  "authors": [
+    "Thanh Hoang"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "wordpress",
+    "theme",
+    "gulp",
+    "sass",
+    "browersync"
+  ],
+  "homepage": "https://github.com/recoba137/WPTemp",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "jquery.scrollTo": "^2.1.2",
+    "font-awesome": "^4.5.0"
+  }
+}

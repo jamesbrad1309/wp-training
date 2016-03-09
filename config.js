@@ -1,0 +1,15 @@
+var THEME_NAME 	= 'WP Theme',
+	FONT_DIR	= 'assets/fonts',
+	IMAGE_DIR	= 'assets/images',
+	CSS_DIR		= 'assets/scss',
+	JS_DIR		= 'assets/js',
+	PROXY		= 'devthemes.dev';
+
+module.exports = {
+	THEME_NAME : THEME_NAME,
+	FONT_DIR: FONT_DIR,
+	IMAGE_DIR: IMAGE_DIR,
+	CSS_DIR: CSS_DIR,
+	JS_DIR: JS_DIR,
+	PROXY: PROXY
+};
