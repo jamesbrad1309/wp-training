@@ -1,9 +1,9 @@
-var THEME_NAME 	= 'WP Theme',
+var THEME_NAME 	= 'WPTheme',
 	FONT_DIR	= 'assets/fonts',
 	IMAGE_DIR	= 'assets/images',
 	CSS_DIR		= 'assets/scss',
 	JS_DIR		= 'assets/js',
-	PROXY		= 'devthemes.dev';
+	PROXY		= 'example.com';
 
 module.exports = {
 	THEME_NAME : THEME_NAME,

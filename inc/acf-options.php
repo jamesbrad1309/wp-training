@@ -6,7 +6,7 @@ if ( function_exists('acf_add_options_page') )
 		'menu_title'	=> 'Theme General Settings',
 		'menu_slug'		=> 'theme_general_settings',
 		'capability'	=> 'edit_posts',
-		'redirct'		=> false
+		'redirect'		=> false
 	));
 
 	acf_add_options_sub_page(array(

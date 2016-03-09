@@ -85,7 +85,7 @@ gulp.task('theme-style', function(){
 
 // Php task
 gulp.task('phpTask', function(){
-	return gulp.src('./**/*.php')
+	return gulp.src('**/*.php')
 	.pipe($.changed('../' + config.THEME_NAME))
 	.pipe(gulp.dest('../' + config.THEME_NAME));
 });
@@ -96,11 +96,11 @@ gulp.task('clean', function(){
 });
 
 // Build task
-gulp.task('build', ['fontTask', 'imageTask', 'vendorjs', 'vendorcss', 'projectjs', 'projectcss', 'phpTask']);
+gulp.task('build', ['theme-style', 'fontTask', 'imageTask', 'vendorjs', 'vendorcss', 'projectjs', 'projectcss', 'phpTask']);
 
 // Browser sync
 gulp.task('browser-sync', ['build'], function(){
-	var files = ['../' + config.THEME_NAME + '/**'];
+	var files = ['../' + config.THEME_NAME + '/**/*.*'];
 	browserSync.init(files,{
 		proxy: config.PROXY,
 		notify: false
@@ -113,8 +113,10 @@ gulp.task('watch', ['browser-sync'], function(){
 	gulp.watch(config.CSS_DIR + '/**/*.scss', ['vendorcss', 'projectcss', 'theme-style']);
 	gulp.watch(config.FONT_DIR + '/*.*', ['fontTask']);
 	gulp.watch(config.IMAGE_DIR + '/*.*', ['imageTask']);
-	gulp.watch('./**/*.php', ['phpTask']);
-	gulp.watch('../' + config.THEME_NAME).on('change', reload);
+	gulp.watch('**/*.php', ['phpTask']);
+	gulp.watch('../' + config.THEME_NAME + '/**/*').on('change', function (file){
+		$.livereload.changed(file.path);
+	});
 });
 
 // Default
