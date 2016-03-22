@@ -10,13 +10,6 @@ var del				= require('del');					// load del plugin
 var browserSync		= require('browser-sync');
 var reload			= browserSync.reload;
 
-// Test task
-gulp.task('test', function(){
-	console.log(config.THEME_NAME);
-	console.log($.mainBowerFiles());
-	console.log('../' + config.THEME_NAME + '/' + config.JS_DIR);
-});
-
 // Font task
 gulp.task('fontTask', function(){
 	return gulp.src(config.FONT_DIR + '/**/*.+(ttf|eot|ttc|otf|woff|woff2|svg)')
@@ -55,7 +48,11 @@ gulp.task('projectjs', function(){
 // CSS task - vendor CSS
 gulp.task('vendorcss', function(){
 	return gulp.src($.mainBowerFiles())
-	.pipe($.filter(['**/*.scss', '**/*.css']))
+	.pipe($.filter(['**/*.scss', '**/*.css', '**/*.less']))
+	.pipe($.order([
+		'bootstrap.css',
+		'*'
+	]))
 	.pipe($.sass())
 	.pipe($.concat('vendor.css'))
 	.pipe($.cssnano())

@@ -1,3 +1,9 @@
+var site = {
+	init: function() {
+		console.log('initialize theme');
+	}
+};
+
 (function ($) {
-	console.log('this is main js');
+	site.init();
 })(jQuery);

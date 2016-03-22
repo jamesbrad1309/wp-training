@@ -1,3 +1,9 @@
+var customize = {
+	init: function() {
+		console.log('customize js');
+	}
+};
+
 (function ($) {
-	console.log('this is customize js');
+	customize.init();
 })(jQuery);
