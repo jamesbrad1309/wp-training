@@ -1,9 +1,7 @@
 var customize = {
-	init: function() {
-		console.log('customize js');
-	}
+    init: function() {}
 };
 
 (function ($) {
-	customize.init();
+    customize.init();
 })(jQuery);

@@ -1,3 +1,3 @@
 <?php get_header(); ?>
-<h1>Test <i class="fa fa-trash"></i></h1>
+<h1>Welcome</h1>
 <?php get_footer(); ?>

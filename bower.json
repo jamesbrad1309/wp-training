@@ -29,7 +29,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.2.1",
     "animate.css": "~3.5.1",
     "bootstrap": "latest",
     "smoothscroll-for-websites": "^1.4.4",

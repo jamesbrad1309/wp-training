@@ -3,7 +3,7 @@ var THEME_NAME 	= 'WPTheme',
 	IMAGE_DIR	= 'assets/images',
 	CSS_DIR		= 'assets/scss',
 	JS_DIR		= 'assets/js',
-	PROXY		= 'example.com';
+	PROXY		= 'local.wordpress.dev';
 
 module.exports = {
 	THEME_NAME : THEME_NAME,

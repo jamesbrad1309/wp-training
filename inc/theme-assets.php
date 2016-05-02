@@ -43,7 +43,7 @@ function theme_enqueue_styles() {
   $vendor_file = THEME_DIR.'/assets/css/vendor.css';
   if (file_exists($vendor_file)) {
     $vendor_handle = $script_handle.'-vendor';
-    wp_register_style($vendor_handle, THEME_URL.'/assets/css/vendor.css', array(), false, true);
+    wp_register_style($vendor_handle, THEME_URL.'/assets/css/vendor.css', array(), false, false);
     wp_enqueue_style($vendor_handle);
   } else {
     var_dump('vendor file not exist!');
