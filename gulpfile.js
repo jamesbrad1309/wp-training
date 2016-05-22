@@ -24,6 +24,8 @@ gulp.task('imageTask', function(){
 
 // JS task - vendor
 gulp.task('vendorjs', function(){
+	// console.log($.mainBowerFiles());
+
 	return gulp.src($.mainBowerFiles())
 	.pipe($.filter('**/*.js'))
 	.pipe($.order([

@@ -52,7 +52,7 @@
             "label": "Practice Phone",
             "name": "practice_phone",
             "type": "text",
-            "instructions": "Format: (###) ###-####",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -73,7 +73,7 @@
             "label": "Practice Fax",
             "name": "practice_fax",
             "type": "text",
-            "instructions": "Format: (###) ###-####",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -94,7 +94,7 @@
             "label": "Practice Address",
             "name": "practice_address",
             "type": "text",
-            "instructions": "Format: ## Street Name  |  City, ST Zip",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -175,8 +175,8 @@
         },
         {
             "key": "field_5726f2bb0a057",
-            "label": "Google Map Addresses",
-            "name": "google_map_addresses",
+            "label": "Google Map Locations",
+            "name": "google_map_locations",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -189,7 +189,7 @@
             "collapsed": "",
             "min": "",
             "max": "",
-            "layout": "table",
+            "layout": "row",
             "button_label": "Add Row",
             "sub_fields": [
                 {
@@ -251,5 +251,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1462170413
+    "modified": 1463937964
 }

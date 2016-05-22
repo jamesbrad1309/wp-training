@@ -44,5 +44,12 @@ if ( function_exists('acf_add_options_page') )
         'parent_slug'   => 'theme_options'
     ));
 
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Shortcode',
+        'menu_title'    => 'Theme Shortcode',
+        'menu_slug'     => 'shortcode',
+        'parent_slug'   => 'theme_options'
+    ));
+
 }
 ?>
