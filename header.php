@@ -20,4 +20,40 @@
 </head>
 
 <body>
-<div class="wrapper">
+    <div class="wrapper">
+
+        <div class="topsection">
+            <div class="container">
+                <div class="infos">
+                    <div class="phone"><span class="glyphicon glyphicon-earphone"></span>Lorem ipsum dolor.</div>
+                    <div class="mail"><span class="glyphicon glyphicon-envelope"></span>Lorem ipsum dolor.</div>
+                    <div class="address"><span class="glyphicon glyphicon-map-marker"></span>Lorem ipsum dolor sit amet.</div>
+                </div>
+
+                <div class="connect">
+                    <span>Connect with us</span>
+                    <a href="" class="sns gplus"></a>
+                    <a href="" class="sns facebook"></a>
+                    <a href="" class="sns twitter"></a>
+                    <a href="" class="sns linkedin"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="">Craig H.Ricks, D.D.S. P.C.</a>
+                </div>
+
+                <nav>
+                    <a href="">HOME</a>
+                    <a href="">MEET THE TEAM</a>
+                    <a href="">SERVICES</a>
+                    <a href="">APPOINTMENT FORMS</a>
+                    <a href="">FAQ</a>
+                    <a href="">CONTACT US</a>
+                    <a href="" class="search"></a>
+                </nav>
+            </div>
+        </div>

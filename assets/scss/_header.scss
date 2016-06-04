@@ -1,0 +1,24 @@
+// color
+$brown : #302818;
+$white : #fff;
+
+// parameters
+$top_height: 35px;
+
+.topsection{
+	width: 100%;
+	background-color: $brown;
+	height: $top_height;
+}
+
+.infos,.connect{
+	display:inline-block;
+	color: $white;
+
+	div, span{
+		display:inline-block;
+		line-height: $top_height;
+		vertical-align: middle;
+		font-family: 'Open Sans';
+	}
+}
