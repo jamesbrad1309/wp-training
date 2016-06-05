@@ -1,6 +1,7 @@
 // color
 $brown : #302818;
 $white : #fff;
+$brown-border: #595346;
 
 // parameters
 $top_height: 35px;
@@ -20,5 +21,38 @@ $top_height: 35px;
 		line-height: $top_height;
 		vertical-align: middle;
 		font-family: 'Open Sans';
+	}
+
+	a{
+		color: $white;
+		display: inline-block;
+		width: 45px;
+		height: 100%;
+		line-height: $top_height;
+		position: relative;
+
+		i{
+			display:block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%); 
+		}
+	}
+}
+
+.connect{
+	.sns-services{
+		width: auto;
+		height: $top_height;
+
+		a{
+			display:inline-block;
+			border-right: 1px solid $brown-border;
+
+			&:last-child{
+				border-right: transparent;
+			}
+		}
 	}
 }

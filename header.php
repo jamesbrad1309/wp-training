@@ -25,17 +25,38 @@
         <div class="topsection">
             <div class="container">
                 <div class="infos">
-                    <div class="phone"><span class="glyphicon glyphicon-earphone"></span>Lorem ipsum dolor.</div>
-                    <div class="mail"><span class="glyphicon glyphicon-envelope"></span>Lorem ipsum dolor.</div>
-                    <div class="address"><span class="glyphicon glyphicon-map-marker"></span>Lorem ipsum dolor sit amet.</div>
+                    <div class="phone">
+                        <i class="fa fa-phone" aria-hidden="true"></i> 
+                        Lorem ipsum dolor.
+                    </div>
+
+                    <div class="mail">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        Lorem ipsum dolor.
+                    </div>
+
+                    <div class="address">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        Lorem ipsum dolor sit amet.
+                    </div>
                 </div>
 
-                <div class="connect">
+                <div class="connect pull-right">
                     <span>Connect with us</span>
-                    <a href="" class="sns gplus"></a>
-                    <a href="" class="sns facebook"></a>
-                    <a href="" class="sns twitter"></a>
-                    <a href="" class="sns linkedin"></a>
+                    <div class="sns-services">
+                        <a href="" class="sns">
+                            <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="sns">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="sns">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="sns">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
