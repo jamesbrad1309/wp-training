@@ -2,6 +2,7 @@
 $brown : #302818;
 $white : #fff;
 $brown-border: #595346;
+$red-velvet: #8a0917;
 
 // parameters
 $top_height: 35px;
@@ -55,4 +56,60 @@ $top_height: 35px;
 			}
 		}
 	}
+}
+
+.header{
+	height: 70px;
+	position:relative;
+
+	.logo{
+		display:inline-block;
+		line-height: 80px;
+		vertical-align: middle;
+		position: absolute;
+		top:50%;
+		transform: translateY(-50%);
+
+		a{
+			font-family: 'GrandHotel-Regular';
+			color: $red-velvet;
+			font-size: 48px;
+			line-height: 80px;
+			vertical-align: middle;
+			text-decoration: none;
+		}
+	}
+
+	.navbar-nav{
+		height: 70px;
+
+		.nav-item{
+			a{
+				font-family: 'Oswald-Regular';
+				font-size: 20px;
+				color:$brown;
+				padding-left: 10px;
+				padding-right: 10px;
+				line-height: 80px;
+				vertical-align: middle;
+
+				padding-top:0px;
+				padding-bottom:0px;
+
+				&:hover{
+					background-color: $white;
+				}
+			}
+
+			&:last-child{
+				a{
+					padding-right: 0px;
+				}
+			}
+		}
+	}
+}
+
+.welcome{
+	height:530px;
 }

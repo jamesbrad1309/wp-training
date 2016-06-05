@@ -61,20 +61,40 @@
             </div>
         </div>
 
-        <div class="header">
+        <nav class="header navbar">
             <div class="container">
                 <div class="logo">
-                    <a href="">Craig H.Ricks, D.D.S. P.C.</a>
+                    <a href="#">Craig H.Ricks, D.D.S. P.C.</a>
                 </div>
 
-                <nav>
-                    <a href="">HOME</a>
-                    <a href="">MEET THE TEAM</a>
-                    <a href="">SERVICES</a>
-                    <a href="">APPOINTMENT FORMS</a>
-                    <a href="">FAQ</a>
-                    <a href="">CONTACT US</a>
-                    <a href="" class="search"></a>
-                </nav>
+                <ul class="nav navbar-nav pull-right">
+                    <li class="nav-item">
+                        <a href="">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">MEET THE TEAM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">APPOINTMENT FORMS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">CONTACT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="search">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
+
+        <section class="welcome">
+             
+        </section>
