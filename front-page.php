@@ -129,4 +129,36 @@
 	</div>
 </section>
 
+<section class="testimonial">
+	<div class="container">
+		<div class="header">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/testimonial-shape.png" alt="">
+		</div>
+
+		<div class="slider">
+			<div id="owl-demo-1" class="owl-carousel owl-theme">
+
+				<div class="item">
+					<!-- <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/fullimage1.jpg" alt="The Last of us"> -->
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla nesciunt fugiat doloremque esse odio consectetur inventore ex mollitia sed quam.</span>
+					<h3>Lorem ipsum dolor.</h3>
+				</div>
+				<div class="item">
+					<!-- <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/fullimage2.jpg" alt="GTA V"> -->
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, doloremque?</span>
+					<h3>Lorem ipsum dolor sit amet.</h3>
+				</div>
+				<div class="item">
+					<!-- <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/fullimage3.jpg" alt="Mirror Edge"> -->
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ullam cupiditate laudantium nulla soluta sunt.</span>
+					<h3>Lorem ipsum dolor sit amet, consectetur.</h3>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
 <?php get_footer(); ?>
