@@ -3,6 +3,7 @@ footer{
 	background-color: $brown;
 	padding-top:50px;
 	position: relative;
+	color: $white;
 
 	.up{
 		height: 70px;
@@ -17,5 +18,116 @@ footer{
 		background-color: $brown;
 		background-repeat: no-repeat;
 		background-position: center;
+	}
+
+	.container{
+		height: 100%;
+
+		.title{
+			font-family: "Oswald-Regular";
+			font-size: 18px;
+			text-transform: uppercase;
+			color: $yellow;
+			margin-bottom: 20px;
+		}
+
+		.content{
+			font-family: 'Open Sans';
+			font-size: 1em;
+			color: $white;
+
+			ul{
+				list-style: none;
+				padding-left: 0px;
+			}
+
+			.form-container{
+				width: 100%;
+				display:block;
+				clear:both;
+				height: 26px;
+			}
+
+			input[type="text"]{
+				padding:3px 5px;
+				color: #000;
+				display: inline-block;
+				width: 60%;
+				float:left;
+				border: 0px;
+			}
+
+			input[type="submit"]{
+				background-color: $red-velvet;
+				width: 35%;
+				display: inline-block;
+				color: $white;
+				border: 0px;
+				height:26px;
+				line-height:26px;
+				vertical-align: middle;
+				float:left;
+				font-family: 'Oswald-Regular';
+			}
+
+			.sns{
+				margin-top:45px;
+				margin-bottom:45px;
+				>div{
+					width: 35px;
+					height: 35px;
+					margin-right: 5px;
+					display:inline-block;
+					position:relative;
+
+					&:last-child{
+						margin-right: 0px;
+					}
+
+					i{
+						position: absolute;
+						top:50%;
+						left:50%;
+						transform: translateX(-50%) translateY(-50%);
+					}
+
+					&.ggp_footer{
+						background-color: #c73745;
+					}
+					&.fb_footer{
+						background-color: #2d72c1;
+					}
+					&.tw_footer{
+						background-color: #0cc9e5;
+					}
+					&.li_footer{
+						background-color: #1958cc;
+					}
+				}
+			}
+
+			.contact-detail{
+				.detail{
+					display:block;
+					margin-bottom:5px;
+					width: 100%;
+
+					i,span{
+						display:inline-block;
+						width: auto;
+						float:left;
+					}
+					i{
+						min-width:15px;
+						text-decoration: none;
+						text-align: center;
+					}
+					span{
+						width: calc(100% - 25px);
+						margin-left: 5px;
+					}
+				}
+			}
+		}
 	}
 }
