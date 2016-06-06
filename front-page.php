@@ -16,7 +16,7 @@
 <section class="about-us">
 	<div class="container">
 		<div class="icon">
-		
+
 		</div>
 
 		<div class="text-content">
@@ -57,6 +57,72 @@
 						<div role="tabpanel" class="tab-pane" id="messages">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius dolores sapiente dolor eligendi neque consectetur explicabo aut, culpa. Quisquam reiciendis, dolores nesciunt itaque tempora quam unde veniam fuga vel.</div>
 					</div>
 
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="our_service">
+	<div class="container">
+		<div class="text-content">
+			<div class="title">
+				Lorem ipsum dolor sit amet.
+			</div>
+			<div class="subtitle">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis beatae, et nemo nostrum odio eveniet atque eius. Aliquam laudantium, hic laboriosam quas voluptatum ipsa! Natus quisquam atque fugiat sed, explicabo!
+			</div>
+		</div>
+
+		<div class="services row">
+			<div class="col-md-3 service">
+				<div class="service-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/teethwhitening.png" alt=""></div>
+
+				<h3 class="service-title">Teethwhitening</h3>
+
+				<p class="service-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iste non, veniam magni deserunt fugit! Sapiente molestiae esse, ullam labore ducimus eos obcaecati asperiores unde porro delectus cumque voluptatum eaque.</p>
+
+				<div class="control">
+					<a href="#">Read More</a>
+				</div>
+			</div>
+			<div class="col-md-3 service">
+				<div class="service-icon">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/toothaches.png" alt="">
+				</div>	
+
+				<h3 class="service-title">Toothaches</h3>
+
+				<p class="service-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iste non, veniam magni deserunt fugit! Sapiente molestiae esse, ullam labore ducimus eos obcaecati asperiores unde porro delectus cumque voluptatum eaque.</p>
+
+				<div class="control">
+					<a href="#">Read More</a>
+				</div>
+			</div>
+			<div class="col-md-3 service">
+				<div class="service-icon">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/veneers.png" alt="" >
+				</div>
+
+				<h3 class="service-title">Veneers</h3>
+
+				<p class="service-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iste non, veniam magni deserunt fugit! Sapiente molestiae esse, ullam labore ducimus eos obcaecati asperiores unde porro delectus cumque voluptatum eaque.</p>
+
+				<div class="control">
+					<a href="#">Read More</a>
+				</div>
+			</div>
+			<div class="col-md-3 service">
+				<div class="service-icon">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/implants.png" alt="">
+				</div>
+
+				<h3 class="service-title">Implants</h3>
+
+				<p class="service-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iste non, veniam magni deserunt fugit! Sapiente molestiae esse, ullam labore ducimus eos obcaecati asperiores unde porro delectus cumque voluptatum eaque.</p>
+
+				<div class="control">
+					<a href="#">Read More</a>
 				</div>
 			</div>
 		</div>
