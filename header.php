@@ -96,5 +96,14 @@
         </nav>
 
         <section class="welcome">
-             
+            <div class="container">
+                <div class="text_content">
+                    <h1 class="welcome_text">asdfasdfasdfas</h1>
+                    <span class="sub_text">asdfasdfasdfasdfasdfasfd</span>
+
+                    <div class="control">
+                        <a href="#" class="btn btn-red">Learn More</a>
+                    </div>
+                </div>
+            </div>
         </section>

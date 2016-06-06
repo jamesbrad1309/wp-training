@@ -112,4 +112,44 @@ $top_height: 35px;
 
 .welcome{
 	height:530px;
+	background: url(../images/background1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: $white;
+	text-shadow: 2px 2px 4px #000000;
+	text-align: center;
+
+	.container{
+		height: 100%;
+		position:relative;
+	}
+
+	.welcome_text{
+		font-family: 'Oswald-Bold';
+		font-size: 61.67px;
+	}
+
+	.sub_text{
+		font-family: 'Open-Sans';
+		font-size: 20.49px;
+	}
+
+	.text_content{
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.control{
+		display:block;
+		clear:both;
+	}
+
+	.btn{
+		background-color: $red-velvet;
+		width: auto;
+		color: white;
+		margin-top:40px;
+	}
 }
