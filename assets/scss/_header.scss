@@ -61,10 +61,11 @@ $top_height: 35px;
 .header{
 	height: 70px;
 	position:relative;
+	margin-bottom: 0px !important;
 
 	.logo{
 		display:inline-block;
-		line-height: 80px;
+		line-height: 70px;
 		vertical-align: middle;
 		position: absolute;
 		top:50%;
@@ -74,7 +75,7 @@ $top_height: 35px;
 			font-family: 'GrandHotel-Regular';
 			color: $red-velvet;
 			font-size: 48px;
-			line-height: 80px;
+			line-height: 70px;
 			vertical-align: middle;
 			text-decoration: none;
 		}
@@ -84,20 +85,25 @@ $top_height: 35px;
 		height: 70px;
 
 		.nav-item{
+
 			a{
 				font-family: 'Oswald-Regular';
 				font-size: 20px;
 				color:$brown;
 				padding-left: 10px;
 				padding-right: 10px;
-				line-height: 80px;
+				line-height: 68px;
 				vertical-align: middle;
 
 				padding-top:0px;
 				padding-bottom:0px;
 
-				&:hover{
+				&:hover,
+				&:focus,
+				&:visited{
 					background-color: $white;
+					outline: transparent !important;
+					outline-offset: 0px !important;
 				}
 			}
 
