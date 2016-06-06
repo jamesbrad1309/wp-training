@@ -1,0 +1,21 @@
+footer{
+	height: 400px;
+	background-color: $brown;
+	padding-top:50px;
+	position: relative;
+
+	.up{
+		height: 70px;
+		width: 70px;
+		border-radius: 100%;
+		position: absolute; 
+		top:0;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		z-index: 10;
+		background: url(../images/upsign.png);
+		background-color: $brown;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}

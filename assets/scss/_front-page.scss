@@ -265,3 +265,46 @@ $yellow: #c1ac35;
 		}
 	}
 }
+
+.apointment{
+	height: 440px;
+	background: url(../images/apointment.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+
+	.main-form{
+		width :40%;
+		height: 320px;
+		position: absolute;
+		background-color: #e3e3e4;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+}
+
+.partners{
+	height: 100px;
+	background-color: $white;
+	img{
+		padding-top:35px;
+		margin-right:25px;
+
+		&:last-child{
+			margin-right: 0px;
+		}
+	}
+
+	// box-shadow: 0 8px 8px -8px #000;
+	// z-index: 2;
+}
+
+.map{
+	height: 340px;
+	.map-content{
+		height: 100%;
+		width: 100%;
+	}
+}
+
