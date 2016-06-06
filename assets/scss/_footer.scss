@@ -130,4 +130,18 @@ footer{
 			}
 		}
 	}
+
+	.row{
+		&:first-child{
+			padding-bottom:10px;
+		}
+
+		&:last-child{
+			.copyright{
+				padding-top:10px;
+				padding-bottom:10px;
+				border-top: 1px solid $yellow;
+			}
+		}
+	}
 }

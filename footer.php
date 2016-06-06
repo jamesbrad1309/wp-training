@@ -71,6 +71,11 @@
 				</div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="copyright">
+				2016 DentalImageAccount
+			</div>
+		</div>
 	</div>
 </footer>
 <?php wp_footer(); ?>
