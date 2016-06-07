@@ -81,38 +81,43 @@ $yellow: #c1ac35;
 			}
 		}
 
-		.nav-tabs{
+		.tab-container{
 			width: 100%;
 
-			li{
-				width: 33.33%;
-				height: 50px;
-				background-color: $yellow;
-				border: transparent;
-				a{
-					border-radius: 0px;
-					height: 100%;
-					font-family: 'Oswald-Regular';
-					font-size: 20px;
-					color: white;
-					border: transparent;
-					margin-right: 0px;
-					text-align:center;
-				}
+			.nav-tabs{
+			width: 100%;
 
-				&.active,
-				&:hover{
+				li{
+					width: 33.33%;
+					height: 50px;
+					background-color: $yellow;
+					border: transparent;
 					a{
-						color: $yellow;
+						border-radius: 0px;
+						height: 100%;
+						font-family: 'Oswald-Regular';
+						font-size: 20px;
+						color: white;
+						border: transparent;
+						margin-right: 0px;
+						text-align:center;
+					}
+
+					&.active,
+					&:hover{
+						a{
+							color: $yellow;
+						}
 					}
 				}
 			}
-		}
 
-		.tab-content{
-			background-color: $white;
-			padding: 20px;
-			height:210px;
+			.tab-content{
+				background-color: $white;
+				padding: 20px;
+				height:210px;
+				width: 100%;
+			}
 		}
 	}
 

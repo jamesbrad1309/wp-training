@@ -84,16 +84,49 @@
 				<div class="tab-container">
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs" role="tablist">
-						<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-						<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-						<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+
+						<?php
+						// check if the repeater field has rows of data
+						if( have_rows('about_us_tabs','option') ):
+						 	// loop through the rows of data
+						 	$i = 0; 
+						    while ( have_rows('about_us_tabs','option') ) : the_row();
+						        // display a sub field value
+						        $label = get_sub_field('tab_label');
+						        $id = '#'.str_replace(' ', '', $label);
+						?>
+							<li role="presentation" <?php if($i==0) echo 'class="active"'; ?>><a href="<?php echo $id; ?>" aria-controls="<?php echo str_replace(' ', '', $label); ?>" role="tab" data-toggle="tab"><?php echo $label; ?></a></li>
+						<?php
+							$i++;
+						    endwhile;
+						else :
+						    // no rows found
+						endif;
+						?>
 					</ul>
 
 					<!-- Tab panes -->
 					<div class="tab-content">
-						<div role="tabpanel" class="tab-pane active" id="home">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam aut inventore accusantium harum consectetur veniam id numquam laborum voluptatum perferendis, est sunt, molestiae consequuntur magnam quasi! Facilis dolores, libero voluptatum.</div>
-						<div role="tabpanel" class="tab-pane" id="profile">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi officiis, voluptas odio, quas natus iste deserunt consequatur molestias dolor minima suscipit culpa soluta, ad vel quis at cum similique id!</div>
-						<div role="tabpanel" class="tab-pane" id="messages">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius dolores sapiente dolor eligendi neque consectetur explicabo aut, culpa. Quisquam reiciendis, dolores nesciunt itaque tempora quam unde veniam fuga vel.</div>
+
+						<?php
+						// check if the repeater field has rows of data
+						if( have_rows('about_us_tabs','option') ):
+						 	// loop through the rows of data
+						 	$i = 0; 
+						    while ( have_rows('about_us_tabs','option') ) : the_row();
+						        // display a sub field value
+						        $label = get_sub_field('tab_label');
+						        $id = str_replace(' ', '', $label);
+						        $content = get_sub_field('tab_content');
+						?>
+							<div role="tabpanel" class="tab-pane <?php if($i==0) echo "active"; ?>" id="<?php echo $id; ?>"><?php echo $content; ?></div>
+						<?php
+							$i++;
+						    endwhile;
+						else :
+						    // no rows found
+						endif;
+						?>
 					</div>
 
 				</div>
