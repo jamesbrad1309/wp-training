@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 07, 2016 at 08:43 AM
+-- Generation Time: Jun 07, 2016 at 11:39 AM
 -- Server version: 5.6.14
 -- PHP Version: 5.5.6
 
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=472 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=577 ;
 
 --
 -- Dumping data for table `wp_options`
@@ -219,7 +219,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (100, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (101, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(103, 'cron', 'a:5:{i:1465282358;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1465323687;a:1:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1465323688;a:2:{s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1465366907;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(103, 'cron', 'a:5:{i:1465323687;a:1:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1465323688;a:2:{s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1465366907;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1465368758;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (107, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:1:{i:0;O:8:"stdClass":10:{s:8:"response";s:6:"latest";s:8:"download";s:59:"https://downloads.wordpress.org/release/wordpress-4.5.2.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:59:"https://downloads.wordpress.org/release/wordpress-4.5.2.zip";s:10:"no_content";s:70:"https://downloads.wordpress.org/release/wordpress-4.5.2-no-content.zip";s:11:"new_bundled";s:71:"https://downloads.wordpress.org/release/wordpress-4.5.2-new-bundled.zip";s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.5.2";s:7:"version";s:5:"4.5.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1465280535;s:15:"version_checked";s:5:"4.5.2";s:12:"translations";a:0:{}}', 'yes'),
 (112, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1465280546;s:7:"checked";a:4:{s:7:"WPTheme";s:5:"0.1.0";s:13:"twentyfifteen";s:3:"1.5";s:14:"twentyfourteen";s:3:"1.7";s:13:"twentysixteen";s:3:"1.2";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'yes'),
 (114, '_site_transient_timeout_browser_a3680ccbafa6ac935c055083aeb0d637', '1465366907', 'yes'),
@@ -316,9 +316,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (363, 'options_social_skype', 'http://skype.com', 'no'),
 (364, '_options_social_skype', 'field_57270c73d0a97', 'no'),
 (373, 'nav_menu_options', 'a:2:{i:0;b:0;s:8:"auto_add";a:0:{}}', 'yes'),
-(382, 'options_about_us_title', 'Serving Colledge Park Family SInce 2011', 'no'),
+(382, 'options_about_us_title', 'Serving Colledge Park Family Since 2011', 'no'),
 (383, '_options_about_us_title', 'field_57565d71afe4c', 'no'),
-(384, 'options_about_us_subtitle', 'Welcome and blah blah blah blah blah blah blah blah blah blah', 'no'),
+(384, 'options_about_us_subtitle', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'no'),
 (385, '_options_about_us_subtitle', 'field_57565d9bafe4d', 'no'),
 (386, 'options_about_us_summary_0_image', '109', 'no'),
 (387, '_options_about_us_summary_0_image', 'field_5756613bafe5a', 'no'),
@@ -331,9 +331,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (394, 'options_about_us_summary_0_read_more_text', 'Read More Text', 'no'),
 (395, '_options_about_us_summary_0_read_more_text', 'field_57566170afe5b', 'no'),
 (396, 'options_about_us_summary', 'a:1:{i:0;s:20:"about_us_summary_row";}', 'no'),
-(397, '_options_about_us_summary', 'field_57565f11afe51', 'no'),
-(398, 'options_about_us_tabs_0_tab_label', 'Kids Dentist', 'no');
+(397, '_options_about_us_summary', 'field_57565f11afe51', 'no');
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
+(398, 'options_about_us_tabs_0_tab_label', 'Kids Dentist', 'no'),
 (399, '_options_about_us_tabs_0_tab_label', 'field_57565e92afe4f', 'no'),
 (400, 'options_about_us_tabs_0_tab_content', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'no'),
 (401, '_options_about_us_tabs_0_tab_content', 'field_57565ed4afe50', 'no'),
@@ -343,13 +343,13 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (405, '_options_about_us_tabs_1_tab_content', 'field_57565ed4afe50', 'no'),
 (406, 'options_about_us_tabs_2_tab_label', 'Orthodontics', 'no'),
 (407, '_options_about_us_tabs_2_tab_label', 'field_57565e92afe4f', 'no'),
-(408, 'options_about_us_tabs_2_tab_content', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'no'),
+(408, 'options_about_us_tabs_2_tab_content', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'no'),
 (409, '_options_about_us_tabs_2_tab_content', 'field_57565ed4afe50', 'no'),
 (410, 'options_about_us_tabs', '3', 'no'),
 (411, '_options_about_us_tabs', 'field_57565e0bafe4e', 'no'),
 (412, 'options_slideshow_content', '0', 'no'),
 (413, '_options_slideshow_content', 'field_574f31c98d773', 'no'),
-(414, 'options_services', '', 'no'),
+(414, 'options_services', 'a:1:{i:0;s:8:"services";}', 'no'),
 (415, '_options_services', 'field_574f32048d776', 'no'),
 (440, 'options_about_us_summary_0_read_more_link_type', 'external', 'no'),
 (441, '_options_about_us_summary_0_read_more_link_type', 'field_5756604cafe54', 'no'),
@@ -357,10 +357,70 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (455, '_options_about_us_summary_0_external_link', 'field_575660ebafe59', 'no'),
 (462, '_site_transient_timeout_theme_roots', '1465282337', 'yes'),
 (463, '_site_transient_theme_roots', 'a:5:{s:7:"WPTheme";s:7:"/themes";s:5:"james";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:14:"twentyfourteen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'yes'),
-(468, '_transient_timeout_GFCache_547515f632f30153374e688ddab4ae0c', '1465281425', 'no'),
-(469, '_transient_GFCache_547515f632f30153374e688ddab4ae0c', 'a:0:{}', 'no'),
-(470, '_transient_timeout_GFCache_4190f7cfb2ec12667fdbc99b79ae6294', '1465281425', 'no'),
-(471, '_transient_GFCache_4190f7cfb2ec12667fdbc99b79ae6294', 'a:0:{}', 'no');
+(481, 'options_aboutus_summary_0_image', '109', 'no'),
+(482, '_options_aboutus_summary_0_image', 'field_5756613bafe5a', 'no'),
+(483, 'options_aboutus_summary_0_title', 'asdfasd', 'no'),
+(484, '_options_aboutus_summary_0_title', 'field_57565f8eafe52', 'no'),
+(485, 'options_aboutus_summary_0_summary', 'asdfasdfasdfasdfasd', 'no'),
+(486, '_options_aboutus_summary_0_summary', 'field_57566036afe53', 'no'),
+(487, 'options_aboutus_summary_0_read_more_link_type', 'external', 'no'),
+(488, '_options_aboutus_summary_0_read_more_link_type', 'field_5756604cafe54', 'no'),
+(489, 'options_aboutus_summary_0_external_link', 'https://google.com', 'no'),
+(490, '_options_aboutus_summary_0_external_link', 'field_575660ebafe59', 'no'),
+(491, 'options_aboutus_summary_0_read_more_text', 'asdfads', 'no'),
+(492, '_options_aboutus_summary_0_read_more_text', 'field_57566170afe5b', 'no'),
+(493, 'options_aboutus_summary', 'a:1:{i:0;s:20:"about_us_summary_row";}', 'no'),
+(494, '_options_aboutus_summary', 'field_57565f11afe51', 'no'),
+(495, 'options_services_0_heading', 'Our Service', 'no'),
+(496, '_options_services_0_heading', 'field_574f328e8d778', 'no'),
+(497, 'options_services_0_sub_heading', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'no'),
+(498, '_options_services_0_sub_heading', 'field_574f32a58d779', 'no'),
+(499, 'options_services_0_service_info_0_icon', '110', 'no'),
+(500, '_options_services_0_service_info_0_icon', 'field_574f32cf8d77b', 'no'),
+(501, 'options_services_0_service_info_0_heading', 'Implants', 'no'),
+(502, '_options_services_0_service_info_0_heading', 'field_574f32dc8d77c', 'no'),
+(503, 'options_services_0_service_info_0_description', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iste non, veniam magni deserunt fugit! ', 'no'),
+(504, '_options_services_0_service_info_0_description', 'field_574f32ee8d77d', 'no'),
+(505, 'options_services_0_service_info_0_link_type', 'external', 'no'),
+(506, '_options_services_0_service_info_0_link_type', 'field_574f32fe8d77e', 'no'),
+(507, 'options_services_0_service_info_0_external_url', 'https://google.com', 'no'),
+(508, '_options_services_0_service_info_0_external_url', 'field_574f335a8d780', 'no'),
+(509, 'options_services_0_service_info', '4', 'no'),
+(510, '_options_services_0_service_info', 'field_574f32b98d77a', 'no'),
+(543, 'options_services_0_service_info_1_icon', '113', 'no'),
+(544, '_options_services_0_service_info_1_icon', 'field_574f32cf8d77b', 'no'),
+(545, 'options_services_0_service_info_1_heading', 'Veneers', 'no'),
+(546, '_options_services_0_service_info_1_heading', 'field_574f32dc8d77c', 'no'),
+(547, 'options_services_0_service_info_1_description', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iste non, veniam magni deserunt fugit!', 'no'),
+(548, '_options_services_0_service_info_1_description', 'field_574f32ee8d77d', 'no'),
+(549, 'options_services_0_service_info_1_link_type', 'external', 'no'),
+(550, '_options_services_0_service_info_1_link_type', 'field_574f32fe8d77e', 'no'),
+(551, 'options_services_0_service_info_1_external_url', 'https://google.com', 'no'),
+(552, '_options_services_0_service_info_1_external_url', 'field_574f335a8d780', 'no'),
+(553, 'options_services_0_service_info_2_icon', '112', 'no'),
+(554, '_options_services_0_service_info_2_icon', 'field_574f32cf8d77b', 'no'),
+(555, 'options_services_0_service_info_2_heading', 'Toothaches', 'no'),
+(556, '_options_services_0_service_info_2_heading', 'field_574f32dc8d77c', 'no'),
+(557, 'options_services_0_service_info_2_description', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iste non, veniam magni deserunt fugit! ', 'no'),
+(558, '_options_services_0_service_info_2_description', 'field_574f32ee8d77d', 'no'),
+(559, 'options_services_0_service_info_2_link_type', 'external', 'no'),
+(560, '_options_services_0_service_info_2_link_type', 'field_574f32fe8d77e', 'no'),
+(561, 'options_services_0_service_info_2_external_url', 'https://google.com', 'no'),
+(562, '_options_services_0_service_info_2_external_url', 'field_574f335a8d780', 'no'),
+(563, 'options_services_0_service_info_3_icon', '111', 'no'),
+(564, '_options_services_0_service_info_3_icon', 'field_574f32cf8d77b', 'no'),
+(565, 'options_services_0_service_info_3_heading', 'Teethwhitening', 'no'),
+(566, '_options_services_0_service_info_3_heading', 'field_574f32dc8d77c', 'no'),
+(567, 'options_services_0_service_info_3_description', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iste non, veniam magni deserunt fugit! ', 'no'),
+(568, '_options_services_0_service_info_3_description', 'field_574f32ee8d77d', 'no'),
+(569, 'options_services_0_service_info_3_link_type', 'external', 'no'),
+(570, '_options_services_0_service_info_3_link_type', 'field_574f32fe8d77e', 'no'),
+(571, 'options_services_0_service_info_3_external_url', 'https://google.com', 'no'),
+(572, '_options_services_0_service_info_3_external_url', 'field_574f335a8d780', 'no'),
+(573, '_transient_timeout_GFCache_547515f632f30153374e688ddab4ae0c', '1465291481', 'no'),
+(574, '_transient_GFCache_547515f632f30153374e688ddab4ae0c', 'a:0:{}', 'no'),
+(575, '_transient_timeout_GFCache_4190f7cfb2ec12667fdbc99b79ae6294', '1465291481', 'no'),
+(576, '_transient_GFCache_4190f7cfb2ec12667fdbc99b79ae6294', 'a:0:{}', 'no');
 
 -- --------------------------------------------------------
 
@@ -376,7 +436,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=125 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=133 ;
 
 --
 -- Dumping data for table `wp_postmeta`
@@ -385,7 +445,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (1, 2, '_wp_page_template', 'default'),
 (72, 67, '_edit_last', '1'),
-(73, 67, '_edit_lock', '1464808179:1'),
+(73, 67, '_edit_lock', '1465291311:1'),
 (74, 61, '_edit_lock', '1465273449:1'),
 (75, 90, '_menu_item_type', 'custom'),
 (76, 90, '_menu_item_menu_item_parent', '0'),
@@ -432,9 +492,17 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (118, 94, '_menu_item_xfn', ''),
 (119, 94, '_menu_item_url', 'http://google.com'),
 (121, 95, '_edit_last', '1'),
-(122, 95, '_edit_lock', '1465281255:1'),
+(122, 95, '_edit_lock', '1465287555:1'),
 (123, 109, '_wp_attached_file', '2016/06/aboutus.png'),
-(124, 109, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:698;s:6:"height";i:462;s:4:"file";s:19:"2016/06/aboutus.png";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:19:"aboutus-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:19:"aboutus-300x199.png";s:5:"width";i:300;s:6:"height";i:199;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}');
+(124, 109, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:698;s:6:"height";i:462;s:4:"file";s:19:"2016/06/aboutus.png";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:19:"aboutus-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:19:"aboutus-300x199.png";s:5:"width";i:300;s:6:"height";i:199;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(125, 110, '_wp_attached_file', '2016/06/implants.png'),
+(126, 110, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:37;s:6:"height";i:41;s:4:"file";s:20:"2016/06/implants.png";s:5:"sizes";a:0:{}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(127, 111, '_wp_attached_file', '2016/06/teethwhitening.png'),
+(128, 111, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:36;s:6:"height";i:41;s:4:"file";s:26:"2016/06/teethwhitening.png";s:5:"sizes";a:0:{}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(129, 112, '_wp_attached_file', '2016/06/toothaches.png'),
+(130, 112, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:41;s:6:"height";i:42;s:4:"file";s:22:"2016/06/toothaches.png";s:5:"sizes";a:0:{}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(131, 113, '_wp_attached_file', '2016/06/veneers.png'),
+(132, 113, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:42;s:6:"height";i:20;s:4:"file";s:19:"2016/06/veneers.png";s:5:"sizes";a:0:{}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}');
 
 -- --------------------------------------------------------
 
@@ -471,7 +539,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=110 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=114 ;
 
 --
 -- Dumping data for table `wp_posts`
@@ -514,30 +582,30 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (60, 1, '2016-06-01 18:55:55', '2016-06-01 18:55:55', 'a:15:{s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"return_format";s:3:"url";s:12:"preview_size";s:4:"full";s:7:"library";s:3:"all";s:9:"min_width";s:0:"";s:10:"min_height";s:0:"";s:8:"min_size";s:0:"";s:9:"max_width";s:0:"";s:10:"max_height";s:0:"";s:8:"max_size";s:0:"";s:10:"mime_types";s:0:"";}', 'Power Logo', 'power_logo', 'publish', 'closed', 'closed', '', 'field_57275afd9415c', '', '', '2016-06-01 18:55:55', '2016-06-01 18:55:55', '', 57, 'http://localhost/wptrain/?post_type=acf-field&p=60', 2, 'acf-field', '', 0),
 (61, 1, '2016-06-01 18:56:03', '2016-06-01 18:56:03', 'a:9:{s:8:"location";a:1:{i:0;a:1:{i:0;a:3:{s:5:"param";s:12:"options_page";s:8:"operator";s:2:"==";s:5:"value";s:9:"shortcode";}}}s:8:"position";s:6:"normal";s:5:"style";s:7:"default";s:15:"label_placement";s:3:"top";s:21:"instruction_placement";s:5:"label";s:14:"hide_on_screen";s:0:"";s:11:"description";s:0:"";s:8:"modified";i:1463936855;s:5:"local";s:4:"json";}', 'Theme Shortcodes', 'theme-shortcodes', 'publish', 'closed', 'closed', '', 'group_573978fa492fd', '', '', '2016-06-01 18:56:03', '2016-06-01 18:56:03', '', 0, 'http://localhost/wptrain/?post_type=acf-field-group&p=61', 0, 'acf-field-group', '', 0),
 (66, 1, '2016-06-01 19:04:03', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-06-01 19:04:03', '0000-00-00 00:00:00', '', 0, 'http://localhost/wptrain/?post_type=acf-field-group&p=66', 0, 'acf-field-group', '', 0),
-(67, 1, '2016-06-01 19:11:57', '2016-06-01 19:11:57', 'a:7:{s:8:"location";a:1:{i:0;a:1:{i:0;a:3:{s:5:"param";s:12:"options_page";s:8:"operator";s:2:"==";s:5:"value";s:16:"homepage_options";}}}s:8:"position";s:6:"normal";s:5:"style";s:7:"default";s:15:"label_placement";s:3:"top";s:21:"instruction_placement";s:5:"label";s:14:"hide_on_screen";s:0:"";s:11:"description";s:0:"";}', 'Homepage Content', 'homepage-content', 'publish', 'closed', 'closed', '', 'group_574f31b7acc1d', '', '', '2016-06-01 19:11:59', '2016-06-01 19:11:59', '', 0, 'http://localhost/wptrain/?post_type=acf-field-group&#038;p=67', 0, 'acf-field-group', '', 0),
+(67, 1, '2016-06-01 19:11:57', '2016-06-01 19:11:57', 'a:7:{s:8:"location";a:1:{i:0;a:1:{i:0;a:3:{s:5:"param";s:12:"options_page";s:8:"operator";s:2:"==";s:5:"value";s:16:"homepage_options";}}}s:8:"position";s:6:"normal";s:5:"style";s:7:"default";s:15:"label_placement";s:3:"top";s:21:"instruction_placement";s:5:"label";s:14:"hide_on_screen";s:0:"";s:11:"description";s:0:"";}', 'Homepage Content', 'homepage-content', 'publish', 'closed', 'closed', '', 'group_574f31b7acc1d', '', '', '2016-06-07 09:24:11', '2016-06-07 09:24:11', '', 0, 'http://localhost/wptrain/?post_type=acf-field-group&#038;p=67', 0, 'acf-field-group', '', 0),
 (68, 1, '2016-06-01 19:11:57', '2016-06-01 19:11:57', 'a:10:{s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:9:"collapsed";s:0:"";s:3:"min";s:0:"";s:3:"max";s:0:"";s:6:"layout";s:5:"table";s:12:"button_label";s:7:"Add Row";}', 'Slideshow Content', 'slideshow_content', 'publish', 'closed', 'closed', '', 'field_574f31c98d773', '', '', '2016-06-01 19:11:57', '2016-06-01 19:11:57', '', 67, 'http://localhost/wptrain/?post_type=acf-field&p=68', 0, 'acf-field', '', 0),
 (69, 1, '2016-06-01 19:11:57', '2016-06-01 19:11:57', 'a:12:{s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:9:"maxlength";s:0:"";s:8:"readonly";i:0;s:8:"disabled";i:0;}', 'Content', 'content', 'publish', 'closed', 'closed', '', 'field_574f31ec8d774', '', '', '2016-06-01 19:11:57', '2016-06-01 19:11:57', '', 68, 'http://localhost/wptrain/?post_type=acf-field&p=69', 0, 'acf-field', '', 0),
 (70, 1, '2016-06-01 19:11:57', '2016-06-01 19:11:57', 'a:12:{s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:9:"maxlength";s:0:"";s:8:"readonly";i:0;s:8:"disabled";i:0;}', 'Author Name', 'author_name', 'publish', 'closed', 'closed', '', 'field_574f31fa8d775', '', '', '2016-06-01 19:11:57', '2016-06-01 19:11:57', '', 68, 'http://localhost/wptrain/?post_type=acf-field&p=70', 1, 'acf-field', '', 0),
-(71, 1, '2016-06-01 19:11:57', '2016-06-01 19:11:57', 'a:9:{s:4:"type";s:16:"flexible_content";s:12:"instructions";s:0:"";s:8:"required";s:0:"";s:17:"conditional_logic";s:0:"";s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:12:"button_label";s:7:"Add Row";s:3:"min";s:0:"";s:3:"max";s:0:"";s:7:"layouts";a:1:{i:0;a:6:{s:3:"key";s:13:"574f324ac0607";s:5:"label";s:8:"Services";s:4:"name";s:8:"services";s:7:"display";s:5:"block";s:3:"min";s:0:"";s:3:"max";s:0:"";}}}', 'Services', 'services', 'publish', 'closed', 'closed', '', 'field_574f32048d776', '', '', '2016-06-01 19:11:57', '2016-06-01 19:11:57', '', 67, 'http://localhost/wptrain/?post_type=acf-field&p=71', 1, 'acf-field', '', 0),
+(71, 1, '2016-06-01 19:11:57', '2016-06-01 19:11:57', 'a:9:{s:4:"type";s:16:"flexible_content";s:12:"instructions";s:0:"";s:8:"required";i:1;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:12:"button_label";s:11:"Add Service";s:3:"min";s:0:"";s:3:"max";i:1;s:7:"layouts";a:1:{i:0;a:6:{s:3:"key";s:13:"574f324ac0607";s:5:"label";s:8:"Services";s:4:"name";s:8:"services";s:7:"display";s:3:"row";s:3:"min";s:0:"";s:3:"max";s:0:"";}}}', 'Services', 'services', 'publish', 'closed', 'closed', '', 'field_574f32048d776', '', '', '2016-06-07 09:24:11', '2016-06-07 09:24:11', '', 67, 'http://localhost/wptrain/?post_type=acf-field&#038;p=71', 1, 'acf-field', '', 0),
 (72, 1, '2016-06-01 19:11:57', '2016-06-01 19:11:57', 'a:13:{s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:0:"";s:17:"conditional_logic";s:0:"";s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"parent_layout";s:13:"574f324ac0607";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:9:"maxlength";s:0:"";s:8:"readonly";i:0;s:8:"disabled";i:0;}', 'Heading', 'heading', 'publish', 'closed', 'closed', '', 'field_574f328e8d778', '', '', '2016-06-01 19:11:57', '2016-06-01 19:11:57', '', 71, 'http://localhost/wptrain/?post_type=acf-field&p=72', 0, 'acf-field', '', 0),
 (73, 1, '2016-06-01 19:11:57', '2016-06-01 19:11:57', 'a:13:{s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:0:"";s:17:"conditional_logic";s:0:"";s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"parent_layout";s:13:"574f324ac0607";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:9:"maxlength";s:0:"";s:8:"readonly";i:0;s:8:"disabled";i:0;}', 'Sub Heading', 'sub_heading', 'publish', 'closed', 'closed', '', 'field_574f32a58d779', '', '', '2016-06-01 19:11:57', '2016-06-01 19:11:57', '', 71, 'http://localhost/wptrain/?post_type=acf-field&p=73', 1, 'acf-field', '', 0),
-(74, 1, '2016-06-01 19:11:58', '2016-06-01 19:11:58', 'a:11:{s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:0:"";s:17:"conditional_logic";s:0:"";s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"parent_layout";s:13:"574f324ac0607";s:9:"collapsed";s:0:"";s:3:"min";s:0:"";s:3:"max";s:0:"";s:6:"layout";s:5:"table";s:12:"button_label";s:7:"Add Row";}', 'Service Info', 'service_info', 'publish', 'closed', 'closed', '', 'field_574f32b98d77a', '', '', '2016-06-01 19:11:58', '2016-06-01 19:11:58', '', 71, 'http://localhost/wptrain/?post_type=acf-field&p=74', 2, 'acf-field', '', 0),
+(74, 1, '2016-06-01 19:11:58', '2016-06-01 19:11:58', 'a:11:{s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";i:1;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"parent_layout";s:13:"574f324ac0607";s:9:"collapsed";s:0:"";s:3:"min";s:0:"";s:3:"max";s:0:"";s:6:"layout";s:3:"row";s:12:"button_label";s:16:"Add Service Info";}', 'Service Info', 'service_info', 'publish', 'closed', 'closed', '', 'field_574f32b98d77a', '', '', '2016-06-07 09:20:29', '2016-06-07 09:20:29', '', 71, 'http://localhost/wptrain/?post_type=acf-field&#038;p=74', 2, 'acf-field', '', 0),
 (75, 1, '2016-06-01 19:11:58', '2016-06-01 19:11:58', 'a:15:{s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"return_format";s:5:"array";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:9:"min_width";s:0:"";s:10:"min_height";s:0:"";s:8:"min_size";s:0:"";s:9:"max_width";s:0:"";s:10:"max_height";s:0:"";s:8:"max_size";s:0:"";s:10:"mime_types";s:0:"";}', 'Icon', 'icon', 'publish', 'closed', 'closed', '', 'field_574f32cf8d77b', '', '', '2016-06-01 19:11:58', '2016-06-01 19:11:58', '', 74, 'http://localhost/wptrain/?post_type=acf-field&p=75', 0, 'acf-field', '', 0),
 (76, 1, '2016-06-01 19:11:58', '2016-06-01 19:11:58', 'a:12:{s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:9:"maxlength";s:0:"";s:8:"readonly";i:0;s:8:"disabled";i:0;}', 'Heading', 'heading', 'publish', 'closed', 'closed', '', 'field_574f32dc8d77c', '', '', '2016-06-01 19:11:58', '2016-06-01 19:11:58', '', 74, 'http://localhost/wptrain/?post_type=acf-field&p=76', 1, 'acf-field', '', 0),
 (77, 1, '2016-06-01 19:11:58', '2016-06-01 19:11:58', 'a:12:{s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:9:"new_lines";s:7:"wpautop";s:8:"readonly";i:0;s:8:"disabled";i:0;}', 'Description', 'description', 'publish', 'closed', 'closed', '', 'field_574f32ee8d77d', '', '', '2016-06-01 19:11:58', '2016-06-01 19:11:58', '', 74, 'http://localhost/wptrain/?post_type=acf-field&p=77', 2, 'acf-field', '', 0),
-(78, 1, '2016-06-01 19:11:58', '2016-06-01 19:11:58', 'a:11:{s:4:"type";s:5:"radio";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:7:"choices";a:2:{s:12:"Internal URL";s:8:"internal";s:12:"External URL";s:8:"external";}s:10:"allow_null";i:0;s:12:"other_choice";i:0;s:17:"save_other_choice";i:0;s:13:"default_value";s:0:"";s:6:"layout";s:8:"vertical";}', 'Link Type', 'link_type', 'publish', 'closed', 'closed', '', 'field_574f32fe8d77e', '', '', '2016-06-01 19:11:58', '2016-06-01 19:11:58', '', 74, 'http://localhost/wptrain/?post_type=acf-field&p=78', 3, 'acf-field', '', 0),
-(79, 1, '2016-06-01 19:11:58', '2016-06-01 19:11:58', 'a:9:{s:4:"type";s:9:"page_link";s:12:"instructions";s:0:"";s:8:"required";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:9:"post_type";a:0:{}s:8:"taxonomy";a:0:{}s:10:"allow_null";i:0;s:8:"multiple";i:0;s:17:"conditional_logic";a:1:{i:0;a:1:{i:0;a:3:{s:5:"field";s:19:"field_574f32fe8d77e";s:8:"operator";s:2:"==";s:5:"value";s:12:"Internal URL";}}}}', 'Internal URL', 'internal_url', 'publish', 'closed', 'closed', '', 'field_574f33398d77f', '', '', '2016-06-01 19:11:58', '2016-06-01 19:11:58', '', 74, 'http://localhost/wptrain/?post_type=acf-field&p=79', 4, 'acf-field', '', 0),
-(80, 1, '2016-06-01 19:11:58', '2016-06-01 19:11:58', 'a:7:{s:4:"type";s:3:"url";s:12:"instructions";s:0:"";s:8:"required";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:17:"conditional_logic";a:1:{i:0;a:1:{i:0;a:3:{s:5:"field";s:19:"field_574f32fe8d77e";s:8:"operator";s:2:"==";s:5:"value";s:12:"External URL";}}}}', 'External URL', 'external_url', 'publish', 'closed', 'closed', '', 'field_574f335a8d780', '', '', '2016-06-01 19:11:58', '2016-06-01 19:11:58', '', 74, 'http://localhost/wptrain/?post_type=acf-field&p=80', 5, 'acf-field', '', 0),
+(78, 1, '2016-06-01 19:11:58', '2016-06-01 19:11:58', 'a:11:{s:4:"type";s:5:"radio";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:7:"choices";a:2:{s:8:"internal";s:12:"Internal URL";s:8:"external";s:12:"External URL";}s:10:"allow_null";i:0;s:12:"other_choice";i:0;s:17:"save_other_choice";i:0;s:13:"default_value";s:8:"internal";s:6:"layout";s:10:"horizontal";}', 'Link Type', 'link_type', 'publish', 'closed', 'closed', '', 'field_574f32fe8d77e', '', '', '2016-06-07 09:18:14', '2016-06-07 09:18:14', '', 74, 'http://localhost/wptrain/?post_type=acf-field&#038;p=78', 3, 'acf-field', '', 0),
+(79, 1, '2016-06-01 19:11:58', '2016-06-01 19:11:58', 'a:9:{s:4:"type";s:9:"page_link";s:12:"instructions";s:0:"";s:8:"required";i:1;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:9:"post_type";a:0:{}s:8:"taxonomy";a:0:{}s:10:"allow_null";i:0;s:8:"multiple";i:0;s:17:"conditional_logic";a:1:{i:0;a:1:{i:0;a:3:{s:5:"field";s:19:"field_574f32fe8d77e";s:8:"operator";s:2:"==";s:5:"value";s:8:"internal";}}}}', 'Internal URL', 'internal_url', 'publish', 'closed', 'closed', '', 'field_574f33398d77f', '', '', '2016-06-07 09:20:29', '2016-06-07 09:20:29', '', 74, 'http://localhost/wptrain/?post_type=acf-field&#038;p=79', 4, 'acf-field', '', 0),
+(80, 1, '2016-06-01 19:11:58', '2016-06-01 19:11:58', 'a:7:{s:4:"type";s:3:"url";s:12:"instructions";s:0:"";s:8:"required";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:17:"conditional_logic";a:1:{i:0;a:1:{i:0;a:3:{s:5:"field";s:19:"field_574f32fe8d77e";s:8:"operator";s:2:"==";s:5:"value";s:8:"external";}}}}', 'External URL', 'external_url', 'publish', 'closed', 'closed', '', 'field_574f335a8d780', '', '', '2016-06-07 09:12:00', '2016-06-07 09:12:00', '', 74, 'http://localhost/wptrain/?post_type=acf-field&#038;p=80', 5, 'acf-field', '', 0),
 (89, 1, '2016-06-01 19:19:10', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-06-01 19:19:10', '0000-00-00 00:00:00', '', 0, 'http://localhost/wptrain/?post_type=acf-field-group&p=89', 0, 'acf-field-group', '', 0),
 (90, 1, '2016-06-03 20:22:47', '0000-00-00 00:00:00', '', 'Home', '', 'draft', 'closed', 'closed', '', '', '', '', '2016-06-03 20:22:47', '0000-00-00 00:00:00', '', 0, 'http://localhost/wptrain/?p=90', 1, 'nav_menu_item', '', 0),
 (91, 1, '2016-06-03 20:22:48', '0000-00-00 00:00:00', ' ', '', '', 'draft', 'closed', 'closed', '', '', '', '', '2016-06-03 20:22:48', '0000-00-00 00:00:00', '', 0, 'http://localhost/wptrain/?p=91', 1, 'nav_menu_item', '', 0),
 (92, 1, '2016-06-07 05:22:27', '2016-06-07 05:22:27', '', 'Home', '', 'publish', 'closed', 'closed', '', 'home', '', '', '2016-06-07 05:22:32', '2016-06-07 05:22:32', '', 0, 'http://localhost/wptraining/?p=92', 1, 'nav_menu_item', '', 0),
 (93, 1, '2016-06-07 05:17:56', '0000-00-00 00:00:00', ' ', '', '', 'draft', 'closed', 'closed', '', '', '', '', '2016-06-07 05:17:56', '0000-00-00 00:00:00', '', 0, 'http://localhost/wptraining/?p=93', 1, 'nav_menu_item', '', 0),
 (94, 1, '2016-06-07 05:22:27', '2016-06-07 05:22:27', '', 'Meet the team', '', 'publish', 'closed', 'closed', '', 'meet-the-team', '', '', '2016-06-07 05:22:32', '2016-06-07 05:22:32', '', 0, 'http://localhost/wptraining/?p=94', 2, 'nav_menu_item', '', 0),
-(95, 1, '2016-06-07 05:54:20', '2016-06-07 05:54:20', 'a:7:{s:8:"location";a:1:{i:0;a:1:{i:0;a:3:{s:5:"param";s:12:"options_page";s:8:"operator";s:2:"==";s:5:"value";s:16:"homepage_options";}}}s:8:"position";s:6:"normal";s:5:"style";s:7:"default";s:15:"label_placement";s:3:"top";s:21:"instruction_placement";s:5:"label";s:14:"hide_on_screen";s:0:"";s:11:"description";s:0:"";}', 'About Us Content', 'about-us-content', 'publish', 'closed', 'closed', '', 'group_57565d3699ab5', '', '', '2016-06-07 06:36:34', '2016-06-07 06:36:34', '', 0, 'http://localhost/wptraining/?post_type=acf-field-group&#038;p=95', 0, 'acf-field-group', '', 0),
+(95, 1, '2016-06-07 05:54:20', '2016-06-07 05:54:20', 'a:7:{s:8:"location";a:1:{i:0;a:1:{i:0;a:3:{s:5:"param";s:12:"options_page";s:8:"operator";s:2:"==";s:5:"value";s:16:"homepage_options";}}}s:8:"position";s:6:"normal";s:5:"style";s:7:"default";s:15:"label_placement";s:3:"top";s:21:"instruction_placement";s:5:"label";s:14:"hide_on_screen";s:0:"";s:11:"description";s:0:"";}', 'About Us Content', 'about-us-content', 'publish', 'closed', 'closed', '', 'group_57565d3699ab5', '', '', '2016-06-07 08:21:30', '2016-06-07 08:21:30', '', 0, 'http://localhost/wptraining/?post_type=acf-field-group&#038;p=95', 0, 'acf-field-group', '', 0),
 (96, 1, '2016-06-07 05:54:20', '2016-06-07 05:54:20', 'a:12:{s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:9:"maxlength";s:0:"";s:8:"readonly";i:0;s:8:"disabled";i:0;}', 'About Us Title', 'about_us_title', 'publish', 'closed', 'closed', '', 'field_57565d71afe4c', '', '', '2016-06-07 05:54:20', '2016-06-07 05:54:20', '', 95, 'http://localhost/wptraining/?post_type=acf-field&p=96', 0, 'acf-field', '', 0),
 (97, 1, '2016-06-07 05:54:20', '2016-06-07 05:54:20', 'a:12:{s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:9:"maxlength";s:0:"";s:8:"readonly";i:0;s:8:"disabled";i:0;}', 'About Us Subtitle', 'about_us_subtitle', 'publish', 'closed', 'closed', '', 'field_57565d9bafe4d', '', '', '2016-06-07 05:54:20', '2016-06-07 05:54:20', '', 95, 'http://localhost/wptraining/?post_type=acf-field&p=97', 1, 'acf-field', '', 0),
-(98, 1, '2016-06-07 05:54:20', '2016-06-07 05:54:20', 'a:9:{s:4:"type";s:16:"flexible_content";s:12:"instructions";s:0:"";s:8:"required";i:1;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:12:"button_label";s:7:"Add Row";s:3:"min";s:0:"";s:3:"max";i:1;s:7:"layouts";a:1:{i:0;a:6:{s:3:"key";s:13:"57565f2baa3c4";s:5:"label";s:16:"About Us Summary";s:4:"name";s:20:"about_us_summary_row";s:7:"display";s:3:"row";s:3:"min";s:0:"";s:3:"max";s:0:"";}}}', 'About Us Summary', 'about_us_summary', 'publish', 'closed', 'closed', '', 'field_57565f11afe51', '', '', '2016-06-07 06:27:51', '2016-06-07 06:27:51', '', 95, 'http://localhost/wptraining/?post_type=acf-field&#038;p=98', 2, 'acf-field', '', 0),
+(98, 1, '2016-06-07 05:54:20', '2016-06-07 05:54:20', 'a:9:{s:4:"type";s:16:"flexible_content";s:12:"instructions";s:0:"";s:8:"required";i:1;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:12:"button_label";s:7:"Add Row";s:3:"min";s:0:"";s:3:"max";i:1;s:7:"layouts";a:1:{i:0;a:6:{s:3:"key";s:13:"57565f2baa3c4";s:5:"label";s:16:"About Us Summary";s:4:"name";s:20:"about_us_summary_row";s:7:"display";s:3:"row";s:3:"min";s:0:"";s:3:"max";s:0:"";}}}', 'About Us Summary', 'aboutus_summary', 'publish', 'closed', 'closed', '', 'field_57565f11afe51', '', '', '2016-06-07 08:21:29', '2016-06-07 08:21:29', '', 95, 'http://localhost/wptraining/?post_type=acf-field&#038;p=98', 2, 'acf-field', '', 0),
 (99, 1, '2016-06-07 05:54:21', '2016-06-07 05:54:21', 'a:16:{s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";i:1;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"parent_layout";s:13:"57565f2baa3c4";s:13:"return_format";s:5:"array";s:12:"preview_size";s:6:"medium";s:7:"library";s:3:"all";s:9:"min_width";s:0:"";s:10:"min_height";s:0:"";s:8:"min_size";s:0:"";s:9:"max_width";s:0:"";s:10:"max_height";s:0:"";s:8:"max_size";s:0:"";s:10:"mime_types";s:0:"";}', 'Image', 'image', 'publish', 'closed', 'closed', '', 'field_5756613bafe5a', '', '', '2016-06-07 05:54:21', '2016-06-07 05:54:21', '', 98, 'http://localhost/wptraining/?post_type=acf-field&p=99', 0, 'acf-field', '', 0),
 (100, 1, '2016-06-07 05:54:21', '2016-06-07 05:54:21', 'a:13:{s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"parent_layout";s:13:"57565f2baa3c4";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:9:"maxlength";s:0:"";s:8:"readonly";i:0;s:8:"disabled";i:0;}', 'Title', 'title', 'publish', 'closed', 'closed', '', 'field_57565f8eafe52', '', '', '2016-06-07 05:54:21', '2016-06-07 05:54:21', '', 98, 'http://localhost/wptraining/?post_type=acf-field&p=100', 1, 'acf-field', '', 0),
 (101, 1, '2016-06-07 05:54:21', '2016-06-07 05:54:21', 'a:13:{s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"parent_layout";s:13:"57565f2baa3c4";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:9:"new_lines";s:7:"wpautop";s:8:"readonly";i:0;s:8:"disabled";i:0;}', 'Summary', 'summary', 'publish', 'closed', 'closed', '', 'field_57566036afe53', '', '', '2016-06-07 05:54:21', '2016-06-07 05:54:21', '', 98, 'http://localhost/wptraining/?post_type=acf-field&p=101', 2, 'acf-field', '', 0),
@@ -548,7 +616,11 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (106, 1, '2016-06-07 05:54:22', '2016-06-07 05:54:22', 'a:10:{s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:9:"collapsed";s:0:"";s:3:"min";s:0:"";s:3:"max";i:3;s:6:"layout";s:3:"row";s:12:"button_label";s:8:"Add Tabs";}', 'About Us Tabs', 'about_us_tabs', 'publish', 'closed', 'closed', '', 'field_57565e0bafe4e', '', '', '2016-06-07 05:54:22', '2016-06-07 05:54:22', '', 95, 'http://localhost/wptraining/?post_type=acf-field&p=106', 3, 'acf-field', '', 0),
 (107, 1, '2016-06-07 05:54:22', '2016-06-07 05:54:22', 'a:12:{s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:9:"maxlength";s:0:"";s:8:"readonly";i:0;s:8:"disabled";i:0;}', 'Tab Label', 'tab_label', 'publish', 'closed', 'closed', '', 'field_57565e92afe4f', '', '', '2016-06-07 05:54:22', '2016-06-07 05:54:22', '', 106, 'http://localhost/wptraining/?post_type=acf-field&p=107', 0, 'acf-field', '', 0),
 (108, 1, '2016-06-07 05:54:22', '2016-06-07 05:54:22', 'a:12:{s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:9:"new_lines";s:7:"wpautop";s:8:"readonly";i:0;s:8:"disabled";i:0;}', 'Tab Content', 'tab_content', 'publish', 'closed', 'closed', '', 'field_57565ed4afe50', '', '', '2016-06-07 05:54:22', '2016-06-07 05:54:22', '', 106, 'http://localhost/wptraining/?post_type=acf-field&p=108', 1, 'acf-field', '', 0),
-(109, 1, '2016-06-07 05:55:52', '2016-06-07 05:55:52', '', 'aboutus', '', 'inherit', 'open', 'closed', '', 'aboutus', '', '', '2016-06-07 06:36:53', '2016-06-07 06:36:53', '', 0, 'http://localhost/wptraining/wp-content/uploads/2016/06/aboutus.png', 0, 'attachment', 'image/png', 0);
+(109, 1, '2016-06-07 05:55:52', '2016-06-07 05:55:52', '', 'aboutus', '', 'inherit', 'open', 'closed', '', 'aboutus', '', '', '2016-06-07 08:21:55', '2016-06-07 08:21:55', '', 0, 'http://localhost/wptraining/wp-content/uploads/2016/06/aboutus.png', 0, 'attachment', 'image/png', 0),
+(110, 1, '2016-06-07 09:08:01', '2016-06-07 09:08:01', '', 'implants', '', 'inherit', 'open', 'closed', '', 'implants', '', '', '2016-06-07 09:08:01', '2016-06-07 09:08:01', '', 0, 'http://localhost/wptraining/wp-content/uploads/2016/06/implants.png', 0, 'attachment', 'image/png', 0),
+(111, 1, '2016-06-07 09:08:02', '2016-06-07 09:08:02', '', 'teethwhitening', '', 'inherit', 'open', 'closed', '', 'teethwhitening', '', '', '2016-06-07 09:08:02', '2016-06-07 09:08:02', '', 0, 'http://localhost/wptraining/wp-content/uploads/2016/06/teethwhitening.png', 0, 'attachment', 'image/png', 0),
+(112, 1, '2016-06-07 09:08:03', '2016-06-07 09:08:03', '', 'toothaches', '', 'inherit', 'open', 'closed', '', 'toothaches', '', '', '2016-06-07 09:08:03', '2016-06-07 09:08:03', '', 0, 'http://localhost/wptraining/wp-content/uploads/2016/06/toothaches.png', 0, 'attachment', 'image/png', 0),
+(113, 1, '2016-06-07 09:08:03', '2016-06-07 09:08:03', '', 'veneers', '', 'inherit', 'open', 'closed', '', 'veneers', '', '', '2016-06-07 09:08:03', '2016-06-07 09:08:03', '', 0, 'http://localhost/wptraining/wp-content/uploads/2016/06/veneers.png', 0, 'attachment', 'image/png', 0);
 
 -- --------------------------------------------------------
 
@@ -838,11 +910,11 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (12, 1, 'dismissed_wp_pointers', ''),
 (13, 1, 'show_welcome_panel', '1'),
 (15, 1, 'wp_dashboard_quick_press_last_post_id', '3'),
-(16, 1, 'session_tokens', 'a:1:{s:64:"020a4ccc8c4c78277319199e34ae1c5b5c0a7a6a19a32b127d5acfccc382327d";a:4:{s:10:"expiration";i:1465445995;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:76:"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0";s:5:"login";i:1465273195;}}'),
+(16, 1, 'session_tokens', 'a:2:{s:64:"020a4ccc8c4c78277319199e34ae1c5b5c0a7a6a19a32b127d5acfccc382327d";a:4:{s:10:"expiration";i:1465445995;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:76:"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0";s:5:"login";i:1465273195;}s:64:"430970d99b9635690a3b5542e45d9f324b5c15419268da8c34053b58a14c1c09";a:4:{s:10:"expiration";i:1465460228;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:76:"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0";s:5:"login";i:1465287428;}}'),
 (17, 1, 'closedpostboxes_theme-options_page_shortcode', 'a:1:{i:0;s:23:"acf-group_573978fa492fd";}'),
 (18, 1, 'metaboxhidden_theme-options_page_shortcode', 'a:0:{}'),
 (19, 1, 'acf_user_settings', 'a:0:{}'),
-(20, 1, 'closedpostboxes_theme-options_page_homepage_options', 'a:0:{}'),
+(20, 1, 'closedpostboxes_theme-options_page_homepage_options', 'a:1:{i:0;s:23:"acf-group_57565d3699ab5";}'),
 (21, 1, 'metaboxhidden_theme-options_page_homepage_options', 'a:0:{}'),
 (22, 1, 'meta-box-order_theme-options_page_homepage_options', 'a:2:{s:4:"side";s:9:"submitdiv";s:6:"normal";s:47:"acf-group_574f31b7acc1d,acf-group_574f3115a7604";}'),
 (23, 1, 'screen_layout_theme-options_page_homepage_options', '2'),
