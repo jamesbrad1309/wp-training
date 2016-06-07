@@ -48,6 +48,12 @@ footer{
 				height: 26px;
 			}
 
+			table{
+				td{
+					padding-right:20px
+				}
+			}
+
 			input[type="text"]{
 				padding:3px 5px;
 				color: #000;
@@ -73,6 +79,10 @@ footer{
 			.sns{
 				margin-top:45px;
 				margin-bottom:45px;
+				a{
+					color: $white;
+				}
+
 				>div{
 					width: 35px;
 					height: 35px;
