@@ -40,6 +40,14 @@ $top_height: 35px;
 			transform: translateX(-50%) translateY(-50%); 
 		}
 	}
+
+	>div{
+		margin-right: 10px;
+
+		&:last-child{
+			margin-right:0px;
+		}
+	}
 }
 
 .connect{

@@ -20,16 +20,44 @@
 		</div>
 
 		<div class="text-content">
-			<div class="title">
-				Lorem ipsum dolor sit amet.
-			</div>
-			<div class="subtitle">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis beatae, et nemo nostrum odio eveniet atque eius. Aliquam laudantium, hic laboriosam quas voluptatum ipsa! Natus quisquam atque fugiat sed, explicabo!
-			</div>
+
+			<?php 
+				$aboutUs_title = do_shortcode('[acf field="about_us_title" post_id="option"]');
+				if($aboutUs_title!=''):
+			 ?>
+				<div class="title">
+					<?php echo $aboutUs_title; ?>
+				</div>
+			<?php endif; ?>
+
+			<?php 
+				$aboutUs_subTitle = do_shortcode('[acf field="about_us_subtitle" post_id="option"]');
+				if($aboutUs_subTitle!=''):
+			 ?>
+				<div class="subtitle">
+					<?php echo $aboutUs_subTitle; ?>
+				</div>
+			<?php endif; ?>
 		</div>
 
 		<div class="row info">
 			<div class="col-md-6">
+				
+				<?php
+				// check if the flexible content field has rows of data
+				if( have_rows('about_us_summary') ):
+
+					var_dump(have_rows('about_us_summary'));
+				     // loop through the rows of data
+				    while ( have_rows('about_us_summary') ) : the_row();
+			        	$title = get_sub_field('title');
+			        	var_dump($title);
+				    endwhile;
+				else :
+				    // no layouts found
+				endif;
+				?>
+
 				<div class="img-content">
 				</div> 
 				<div class="text-content">
@@ -39,7 +67,8 @@
 						<a href="#" class="btn btn-red">Read More</a>
 					</div>
 				</div>
-			</div>
+
+			</div><!--end col-md-6-->
 
 			<div class="col-md-6">
 				<div class="tab-container">

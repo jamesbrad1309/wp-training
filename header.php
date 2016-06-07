@@ -27,35 +27,70 @@
                 <div class="infos">
                     <div class="phone">
                         <i class="fa fa-phone" aria-hidden="true"></i> 
-                        Lorem ipsum dolor.
+                        <?php 
+                            $phone = do_shortcode('[acf field="practice_phone" post_id="option"]');
+                            if($phone!=''){
+                                echo $phone;
+                            }
+                         ?>
                     </div>
 
                     <div class="mail">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        Lorem ipsum dolor.
+                        <?php 
+                            // $email = get_field('practice_email', 'option');
+                            $email = do_shortcode('[acf field="practice_email" post_id="option"]');
+                            if($email!=''){
+                                echo $email;
+                            }
+                        ?>
                     </div>
 
                     <div class="address">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        Lorem ipsum dolor sit amet.
+                        <?php 
+                            $address = do_shortcode('[acf field="practice_address" post_id="option"]');
+                            if($address!=''){
+                                echo $address;
+                            }
+                         ?>
                     </div>
                 </div>
 
                 <div class="connect pull-right">
                     <span>Connect with us</span>
                     <div class="sns-services">
-                        <a href="" class="sns">
+
+                        <?php 
+                            $gplus_link = do_shortcode('[acf field="social_google_plus" post_id="option"]');
+                            $fb_link = do_shortcode('[acf field="social_facebook" post_id="option"]');
+                            $twitter_link = do_shortcode('[acf field="social_twitter" post_id="option"]');
+                            $linkedin_link = do_shortcode('[acf field="social_linkedin" post_id="option"]');
+                         ?>
+
+                        <?php if($gplus_link!=''): ?>
+                        <a href="<?php echo $gplus_link; ?>" class="sns">
                             <i class="fa fa-google-plus" aria-hidden="true"></i>
                         </a>
-                        <a href="" class="sns">
+                        <?php endif; ?>
+
+                        <?php if($fb_link!=''): ?>
+                        <a href="<?php echo $fb_link; ?>" class="sns">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </a>
-                        <a href="" class="sns">
+                        <?php endif; ?>
+                        
+                        <?php if($twitter_link!=''): ?>
+                        <a href="<?php echo $twitter_link; ?>" class="sns">
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                         </a>
-                        <a href="" class="sns">
+                        <?php endif; ?>
+                        
+                        <?php if($linkedin_link!=''): ?>
+                        <a href="<?php echo $linkedin_link; ?>" class="sns">
                             <i class="fa fa-linkedin" aria-hidden="true"></i>
                         </a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -63,34 +98,28 @@
 
         <nav class="header navbar">
             <div class="container">
-                <div class="logo">
-                    <a href="#">Craig H.Ricks, D.D.S. P.C.</a>
-                </div>
 
-                <ul class="nav navbar-nav pull-right">
-                    <li class="nav-item">
-                        <a href="">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="">MEET THE TEAM</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="">SERVICES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="">APPOINTMENT FORMS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="">CONTACT US</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="search">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
+                <?php 
+                    $logo_link = do_shortcode('[acf field="practice_logo" post_id="option"]');
+
+                    if($logo_link!=''):
+                 ?>
+                    <div class="logo">
+                        <img src="<?php echo $logo_link; ?>" alt="<?php echo get_bloginfo('name'); ?>">
+                    </div>
+                <?php else: ?>
+                    <div class="logo">
+                        <a href="<?php echo get_bloginfo('siteurl'); ?>"><?php echo get_bloginfo('name'); ?></a>
+                    </div>
+                <?php endif; ?>
+
+                <?php 
+                    wp_nav_menu( array(
+                        'menu' => 'Main Menu',
+                        'container'=> false,
+                        'fallback_cb' => false,
+                        'menu_class' => 'nav navbar-nav pull-right',
+                    ) );
+                 ?>
             </div>
         </nav>
