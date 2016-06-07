@@ -138,67 +138,81 @@
 <section class="our_service">
 	<div class="container">
 		<div class="text-content">
-			<div class="title">
-				Lorem ipsum dolor sit amet.
-			</div>
-			<div class="subtitle">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis beatae, et nemo nostrum odio eveniet atque eius. Aliquam laudantium, hic laboriosam quas voluptatum ipsa! Natus quisquam atque fugiat sed, explicabo!
-			</div>
+
+			<?php
+			// check if the repeater field has rows of data
+			if( have_rows('services','option') ):
+			 	// loop through the rows of data
+			 	$i = 0; 
+			    while ( have_rows('services','option') ) : the_row();
+			        // display a sub field value
+			        $heading = get_sub_field('heading');
+			        // var_dump($heading);
+			        $sub_heading = get_sub_field('sub_heading');
+			?>
+
+				<div class="title">
+					<?php echo $heading; ?>
+				</div>
+				<div class="subtitle">
+					<?php echo $sub_heading; ?>
+				</div>
 		</div>
 
 		<div class="services row">
-			<div class="col-md-3 service">
-				<div class="service-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/teethwhitening.png" alt=""></div>
 
-				<h3 class="service-title">Teethwhitening</h3>
+			<?php
+			// check if the repeater field has rows of data
+			if( have_rows('service_info','option') ):
+			 	// loop through the rows of data
+			 	$i = 0; 
+			    while ( have_rows('service_info','option') ) : the_row();
+			        // display a sub field value
+			        $icon = get_sub_field('icon');
+			        $heading_sub = get_sub_field('heading');
+			        $description = get_sub_field('description');
 
-				<p class="service-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iste non, veniam magni deserunt fugit! Sapiente molestiae esse, ullam labore ducimus eos obcaecati asperiores unde porro delectus cumque voluptatum eaque.</p>
+			        $external_link = get_sub_field('external_link');
+			        $internal_link = get_sub_field('internal_link');
+			        $link = '';
+			        if($external_link==''){
+			        	$link = $internal_link;
+			        }else{
+			        	$link = $external_link;
+			        }
+			?>
+				
+				<div class="col-md-3 service">
+					<div class="service-icon"><img src="<?php echo $icon['url']; ?>" alt="<?php echo $heading_sub; ?>"></div>
 
-				<div class="control">
-					<a href="#">Read More</a>
-				</div>
-			</div>
-			<div class="col-md-3 service">
-				<div class="service-icon">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/toothaches.png" alt="">
-				</div>	
+					<h3 class="service-title"><?php echo $heading_sub; ?></h3>
 
-				<h3 class="service-title">Toothaches</h3>
+					<p class="service-content"><?php echo $description; ?></p>
 
-				<p class="service-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iste non, veniam magni deserunt fugit! Sapiente molestiae esse, ullam labore ducimus eos obcaecati asperiores unde porro delectus cumque voluptatum eaque.</p>
-
-				<div class="control">
-					<a href="#">Read More</a>
-				</div>
-			</div>
-			<div class="col-md-3 service">
-				<div class="service-icon">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/veneers.png" alt="" >
-				</div>
-
-				<h3 class="service-title">Veneers</h3>
-
-				<p class="service-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iste non, veniam magni deserunt fugit! Sapiente molestiae esse, ullam labore ducimus eos obcaecati asperiores unde porro delectus cumque voluptatum eaque.</p>
-
-				<div class="control">
-					<a href="#">Read More</a>
-				</div>
-			</div>
-			<div class="col-md-3 service">
-				<div class="service-icon">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/implants.png" alt="">
+					<div class="control">
+						<a href="<?php echo $link; ?>">Read More</a>
+					</div>
 				</div>
 
-				<h3 class="service-title">Implants</h3>
+			<?php
+				$i++;
+			    endwhile;
+			else :
+			    // no rows found
+			endif;
+			?>
 
-				<p class="service-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iste non, veniam magni deserunt fugit! Sapiente molestiae esse, ullam labore ducimus eos obcaecati asperiores unde porro delectus cumque voluptatum eaque.</p>
+		</div><!--end service row-->
 
-				<div class="control">
-					<a href="#">Read More</a>
-				</div>
-			</div>
-		</div>
-	</div>
+		<?php
+			$i++;
+		    endwhile;
+		else :
+		    // no rows found
+		endif;
+		?>
+		
+	</div><!--end container-->
 </section>
 
 <section class="testimonial">
