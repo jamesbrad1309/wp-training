@@ -22,117 +22,117 @@
 		<div class="text-content">
 
 			<?php 
-				$aboutUs_title = do_shortcode('[acf field="about_us_title" post_id="option"]');
-				if($aboutUs_title!=''):
-			 ?>
-				<div class="title">
-					<?php echo $aboutUs_title; ?>
-				</div>
-			<?php endif; ?>
-
-			<?php 
-				$aboutUs_subTitle = do_shortcode('[acf field="about_us_subtitle" post_id="option"]');
-				if($aboutUs_subTitle!=''):
-			 ?>
-				<div class="subtitle">
-					<?php echo $aboutUs_subTitle; ?>
-				</div>
-			<?php endif; ?>
-		</div>
-
-		<div class="row info">
-			<div class="col-md-6">
-				
-				<?php
-				// check if the flexible content field has rows of data
-				if(have_rows('aboutus_summary','option')):
-				     // loop through the rows of data
-				    while ( have_rows('aboutus_summary','option') ) : the_row();
-						$img = get_sub_field('image');
-			        	$title = get_sub_field('title');
-			        	$summary = get_sub_field('summary');
-			        	$external_link = get_sub_field('external_link');
-			        	$internal_link = get_sub_field('internal_link');
-			        	$link = '';	
-
-			        	if($external_link==''){
-			        		$link = $internal_link;
-			        	}else{
-			        		$link = $external_link;
-			        	}
-
-			        	$readmore_text = get_sub_field('read_more_text');
-			    ?>
-					<div class="img-content" style="background: url(<?php echo $img['url']; ?>); background-size:cover;">
-					</div> 
-					<div class="text-content">
-						<div class="title"><?php echo $title; ?></div>
-						<div class="content"><?php echo $summary; ?></div>
-						<div class="control">
-							<a href="<?php echo $link; ?>" class="btn btn-red"><?php echo $readmore_text; ?></a>
-						</div>
-					</div>
-			    <?php
-				    endwhile;
-				else :
-				    var_dump('no layout');
-				endif;
+			$aboutUs_title = do_shortcode('[acf field="about_us_title" post_id="option"]');
+			if($aboutUs_title!=''):
 				?>
-			</div><!--end col-md-6-->
+			<div class="title">
+				<?php echo $aboutUs_title; ?>
+			</div>
+		<?php endif; ?>
 
-			<div class="col-md-6">
-				<div class="tab-container">
-					<!-- Nav tabs -->
-					<ul class="nav nav-tabs" role="tablist">
+		<?php 
+		$aboutUs_subTitle = do_shortcode('[acf field="about_us_subtitle" post_id="option"]');
+		if($aboutUs_subTitle!=''):
+			?>
+		<div class="subtitle">
+			<?php echo $aboutUs_subTitle; ?>
+		</div>
+	<?php endif; ?>
+</div>
 
-						<?php
-						// check if the repeater field has rows of data
-						if( have_rows('about_us_tabs','option') ):
-						 	// loop through the rows of data
-						 	$i = 0; 
-						    while ( have_rows('about_us_tabs','option') ) : the_row();
-						        // display a sub field value
-						        $label = get_sub_field('tab_label');
-						        $id = '#'.str_replace(' ', '', $label);
-						?>
-							<li role="presentation" <?php if($i==0) echo 'class="active"'; ?>><a href="<?php echo $id; ?>" aria-controls="<?php echo str_replace(' ', '', $label); ?>" role="tab" data-toggle="tab"><?php echo $label; ?></a></li>
-						<?php
-							$i++;
-						    endwhile;
-						else :
-						    // no rows found
-						endif;
-						?>
-					</ul>
+<div class="row info">
+	<div class="col-md-6">
 
-					<!-- Tab panes -->
-					<div class="tab-content">
+		<?php
+				// check if the flexible content field has rows of data
+		if(have_rows('aboutus_summary','option')):
+				     // loop through the rows of data
+			while ( have_rows('aboutus_summary','option') ) : the_row();
+		$img = get_sub_field('image');
+		$title = get_sub_field('title');
+		$summary = get_sub_field('summary');
+		$external_link = get_sub_field('external_link');
+		$internal_link = get_sub_field('internal_link');
+		$link = '';	
 
-						<?php
-						// check if the repeater field has rows of data
-						if( have_rows('about_us_tabs','option') ):
-						 	// loop through the rows of data
-						 	$i = 0; 
-						    while ( have_rows('about_us_tabs','option') ) : the_row();
-						        // display a sub field value
-						        $label = get_sub_field('tab_label');
-						        $id = str_replace(' ', '', $label);
-						        $content = get_sub_field('tab_content');
-						?>
-							<div role="tabpanel" class="tab-pane <?php if($i==0) echo "active"; ?>" id="<?php echo $id; ?>"><?php echo $content; ?></div>
-						<?php
-							$i++;
-						    endwhile;
-						else :
-						    // no rows found
-						endif;
-						?>
-					</div>
+		if($external_link==''){
+			$link = $internal_link;
+		}else{
+			$link = $external_link;
+		}
 
-				</div>
+		$readmore_text = get_sub_field('read_more_text');
+		?>
+		<div class="img-content" style="background: url(<?php echo $img['url']; ?>); background-size:cover;">
+		</div> 
+		<div class="text-content">
+			<div class="title"><?php echo $title; ?></div>
+			<div class="content"><?php echo $summary; ?></div>
+			<div class="control">
+				<a href="<?php echo $link; ?>" class="btn btn-red"><?php echo $readmore_text; ?></a>
 			</div>
 		</div>
+		<?php
+		endwhile;
+		else :
+			var_dump('no layout');
+		endif;
+		?>
+	</div><!--end col-md-6-->
+
+	<div class="col-md-6">
+		<div class="tab-container">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+
+				<?php
+						// check if the repeater field has rows of data
+				if( have_rows('about_us_tabs','option') ):
+						 	// loop through the rows of data
+					$i = 0; 
+				while ( have_rows('about_us_tabs','option') ) : the_row();
+						        // display a sub field value
+				$label = get_sub_field('tab_label');
+				$id = '#'.str_replace(' ', '', $label);
+				?>
+				<li role="presentation" <?php if($i==0) echo 'class="active"'; ?>><a href="<?php echo $id; ?>" aria-controls="<?php echo str_replace(' ', '', $label); ?>" role="tab" data-toggle="tab"><?php echo $label; ?></a></li>
+				<?php
+				$i++;
+				endwhile;
+				else :
+						    // no rows found
+					endif;
+				?>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+
+				<?php
+						// check if the repeater field has rows of data
+				if( have_rows('about_us_tabs','option') ):
+						 	// loop through the rows of data
+					$i = 0; 
+				while ( have_rows('about_us_tabs','option') ) : the_row();
+						        // display a sub field value
+				$label = get_sub_field('tab_label');
+				$id = str_replace(' ', '', $label);
+				$content = get_sub_field('tab_content');
+				?>
+				<div role="tabpanel" class="tab-pane <?php if($i==0) echo "active"; ?>" id="<?php echo $id; ?>"><?php echo $content; ?></div>
+				<?php
+				$i++;
+				endwhile;
+				else :
+						    // no rows found
+					endif;
+				?>
+			</div>
+
+		</div>
 	</div>
+</div>
+</div>
 </section>
 
 <section class="our_service">
@@ -143,20 +143,20 @@
 			// check if the repeater field has rows of data
 			if( have_rows('services','option') ):
 			 	// loop through the rows of data
-			 	$i = 0; 
-			    while ( have_rows('services','option') ) : the_row();
+				$i = 0; 
+			while ( have_rows('services','option') ) : the_row();
 			        // display a sub field value
-			        $heading = get_sub_field('heading');
+			$heading = get_sub_field('heading');
 			        // var_dump($heading);
-			        $sub_heading = get_sub_field('sub_heading');
+			$sub_heading = get_sub_field('sub_heading');
 			?>
 
-				<div class="title">
-					<?php echo $heading; ?>
-				</div>
-				<div class="subtitle">
-					<?php echo $sub_heading; ?>
-				</div>
+			<div class="title">
+				<?php echo $heading; ?>
+			</div>
+			<div class="subtitle">
+				<?php echo $sub_heading; ?>
+			</div>
 		</div>
 
 		<div class="services row">
@@ -165,51 +165,51 @@
 			// check if the repeater field has rows of data
 			if( have_rows('service_info','option') ):
 			 	// loop through the rows of data
-			 	$i = 0; 
-			    while ( have_rows('service_info','option') ) : the_row();
+				$i = 0; 
+			while ( have_rows('service_info','option') ) : the_row();
 			        // display a sub field value
-			        $icon = get_sub_field('icon');
-			        $heading_sub = get_sub_field('heading');
-			        $description = get_sub_field('description');
+			$icon = get_sub_field('icon');
+			$heading_sub = get_sub_field('heading');
+			$description = get_sub_field('description');
 
-			        $external_link = get_sub_field('external_link');
-			        $internal_link = get_sub_field('internal_link');
-			        $link = '';
-			        if($external_link==''){
-			        	$link = $internal_link;
-			        }else{
-			        	$link = $external_link;
-			        }
+			$external_link = get_sub_field('external_link');
+			$internal_link = get_sub_field('internal_link');
+			$link = '';
+			if($external_link==''){
+				$link = $internal_link;
+			}else{
+				$link = $external_link;
+			}
 			?>
-				
-				<div class="col-md-3 service">
-					<div class="service-icon"><img src="<?php echo $icon['url']; ?>" alt="<?php echo $heading_sub; ?>"></div>
 
-					<h3 class="service-title"><?php echo $heading_sub; ?></h3>
+			<div class="col-md-3 service">
+				<div class="service-icon"><img src="<?php echo $icon['url']; ?>" alt="<?php echo $heading_sub; ?>"></div>
 
-					<p class="service-content"><?php echo $description; ?></p>
+				<h3 class="service-title"><?php echo $heading_sub; ?></h3>
 
-					<div class="control">
-						<a href="<?php echo $link; ?>">Read More</a>
-					</div>
+				<p class="service-content"><?php echo $description; ?></p>
+
+				<div class="control">
+					<a href="<?php echo $link; ?>">Read More</a>
 				</div>
+			</div>
 
 			<?php
-				$i++;
-			    endwhile;
+			$i++;
+			endwhile;
 			else :
 			    // no rows found
-			endif;
+				endif;
 			?>
 
 		</div><!--end service row-->
 
 		<?php
-			$i++;
-		    endwhile;
+		$i++;
+		endwhile;
 		else :
 		    // no rows found
-		endif;
+			endif;
 		?>
 		
 	</div><!--end container-->
@@ -223,23 +223,30 @@
 
 		<div class="slider">
 			<div id="owl-demo-1" class="owl-carousel owl-theme">
+				
+				<?php
+				// check if the repeater field has rows of data
+				if( have_rows('slideshow_content','option') ):
+			 	// loop through the rows of data
+					$i = 0; 
+				while ( have_rows('slideshow_content','option') ) : the_row();
+			        // display a sub field value
+				$content = get_sub_field('content');
+				$author_name = get_sub_field('author_name');
+				?>
+				
+				<div class="item">
+					<span><?php echo $content; ?></span>
+					<h3><?php echo $author_name; ?></h3>
+				</div>
 
-				<div class="item">
-					<!-- <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/fullimage1.jpg" alt="The Last of us"> -->
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla nesciunt fugiat doloremque esse odio consectetur inventore ex mollitia sed quam.</span>
-					<h3>Lorem ipsum dolor.</h3>
-				</div>
-				<div class="item">
-					<!-- <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/fullimage2.jpg" alt="GTA V"> -->
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, doloremque?</span>
-					<h3>Lorem ipsum dolor sit amet.</h3>
-				</div>
-				<div class="item">
-					<!-- <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/fullimage3.jpg" alt="Mirror Edge"> -->
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ullam cupiditate laudantium nulla soluta sunt.</span>
-					<h3>Lorem ipsum dolor sit amet, consectetur.</h3>
-				</div>
-
+				<?php
+				$i++;
+				endwhile;
+				else :
+			    // no rows found
+					endif;
+				?>
 			</div>
 		</div>
 	</div>
