@@ -45,29 +45,39 @@
 				
 				<?php
 				// check if the flexible content field has rows of data
-				if( have_rows('about_us_summary') ):
-
-					var_dump(have_rows('about_us_summary'));
+				if(have_rows('aboutus_summary','option')):
 				     // loop through the rows of data
-				    while ( have_rows('about_us_summary') ) : the_row();
+				    while ( have_rows('aboutus_summary','option') ) : the_row();
+						$img = get_sub_field('image');
 			        	$title = get_sub_field('title');
-			        	var_dump($title);
+			        	$summary = get_sub_field('summary');
+			        	$external_link = get_sub_field('external_link');
+			        	$internal_link = get_sub_field('internal_link');
+			        	$link = '';	
+
+			        	if($external_link==''){
+			        		$link = $internal_link;
+			        	}else{
+			        		$link = $external_link;
+			        	}
+
+			        	$readmore_text = get_sub_field('read_more_text');
+			    ?>
+					<div class="img-content" style="background: url(<?php echo $img['url']; ?>); background-size:cover;">
+					</div> 
+					<div class="text-content">
+						<div class="title"><?php echo $title; ?></div>
+						<div class="content"><?php echo $summary; ?></div>
+						<div class="control">
+							<a href="<?php echo $link; ?>" class="btn btn-red"><?php echo $readmore_text; ?></a>
+						</div>
+					</div>
+			    <?php
 				    endwhile;
 				else :
-				    // no layouts found
+				    var_dump('no layout');
 				endif;
 				?>
-
-				<div class="img-content">
-				</div> 
-				<div class="text-content">
-					<div class="title">About us</div>
-					<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui odio, laudantium voluptatibus autem rem sed commodi molestias fugiat sequi quas.</div>
-					<div class="control">
-						<a href="#" class="btn btn-red">Read More</a>
-					</div>
-				</div>
-
 			</div><!--end col-md-6-->
 
 			<div class="col-md-6">
